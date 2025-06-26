@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maven-project-deployment
+  labels:
+    app: maven-project
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: maven-project
+  template:
+    metadata:
+      labels:
+        app: maven-project
+    spec:
+      containers:
+      - name: maven-container
+        image: 7674043534/maven-project
+        ports:
+        - containerPort: 8080
+
