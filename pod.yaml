@@ -1,14 +1,12 @@
-apiVersion: apps/v1
+apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-1
-labels:
-app: maven-project
+  name: my-first-pod
 spec:
   containers:
     - name: maven-container
       image: 7674043534/maven-project
       ports:
-      - containerPort: 8080
+        - containerPort: 8080
 
 
